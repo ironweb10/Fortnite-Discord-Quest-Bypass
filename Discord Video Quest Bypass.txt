@@ -1,0 +1,14 @@
+Discord Video Quest Bypass:
+
+
+Put this on a bookmark and run it on discord video quest
+javascript:(function(){
+    const videos = document.querySelectorAll("video");
+    if (videos.length > 0) {
+        let video = Array.from(videos).find(v => !v.paused) || videos[0];
+        video.currentTime = video.duration;
+        alert("Succesfully bypassed.");
+    } else {
+        alert("Error.");
+    }
+})();
